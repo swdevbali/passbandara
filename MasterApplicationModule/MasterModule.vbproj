@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{414FB9C3-023A-4787-84BA-45C32516872E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MasterModule</RootNamespace>
+    <AssemblyName>MasterModule</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MasterModule.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MasterModule.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=7.3.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="gLabel">
+      <HintPath>..\..\..\..\Dependencies\gLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="MenuControls">
+      <HintPath>..\..\..\..\Dependencies\MenuControls.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.4.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Dependencies\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NetToolMysql_v12">
+      <HintPath>..\..\..\..\Dependencies\NetToolMysql_v12.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <HintPath>..\..\..\..\Dependencies\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MasterPageFactory.vb" />
+    <Compile Include="Master\Instansi\InstansiEntryPage.Designer.vb">
+      <DependentUpon>InstansiEntryPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Instansi\InstansiEntryPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Instansi\InstansiListPage.Designer.vb">
+      <DependentUpon>InstansiListPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Instansi\InstansiListPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Instansi\ViewInstansi.Designer.vb">
+      <DependentUpon>ViewInstansi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Instansi\ViewInstansi.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Jabatan\JabatanEntryPage.Designer.vb">
+      <DependentUpon>JabatanEntryPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Jabatan\JabatanEntryPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Jabatan\JabatanListPage.Designer.vb">
+      <DependentUpon>JabatanListPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Jabatan\JabatanListPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\JenisBerkas\JenisBerkasEntryPage.Designer.vb">
+      <DependentUpon>JenisBerkasEntryPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\JenisBerkas\JenisBerkasEntryPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\JenisBerkas\JenisBerkasListPage.Designer.vb">
+      <DependentUpon>JenisBerkasListPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\JenisBerkas\JenisBerkasListPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Pemohon\PemohonEntryPage.Designer.vb">
+      <DependentUpon>PemohonEntryPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Pemohon\PemohonEntryPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Pemohon\PemohonListPage.Designer.vb">
+      <DependentUpon>PemohonListPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Pemohon\PemohonListPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Pemohon\ViewPemohon.Designer.vb">
+      <DependentUpon>ViewPemohon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Pemohon\ViewPemohon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\PermohonanBundle\PermohonanBundleEntryPage.Designer.vb">
+      <DependentUpon>PermohonanBundleEntryPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\PermohonanBundle\PermohonanBundleEntryPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\PermohonanBundle\PermohonanBundleListPage.Designer.vb">
+      <DependentUpon>PermohonanBundleListPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\PermohonanBundle\PermohonanBundleListPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Petugas\PetugasEntryPage.Designer.vb">
+      <DependentUpon>PetugasEntryPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Petugas\PetugasEntryPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Petugas\PetugasListPage.Designer.vb">
+      <DependentUpon>PetugasListPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Petugas\PetugasListPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Progress\ProgressEntryPage.Designer.vb">
+      <DependentUpon>ProgressEntryPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Progress\ProgressEntryPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\Progress\ProgressListPage.Designer.vb">
+      <DependentUpon>ProgressListPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Progress\ProgressListPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\HakAkses\HakAkses.Designer.vb">
+      <DependentUpon>HakAkses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\HakAkses\HakAkses.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Master\ZLogUser\ZLogUserListPage.Designer.vb">
+      <DependentUpon>ZLogUserListPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Master\ZLogUser\ZLogUserListPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Master\Instansi\InstansiEntryPage.resx">
+      <DependentUpon>InstansiEntryPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Instansi\InstansiListPage.resx">
+      <DependentUpon>InstansiListPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Instansi\ViewInstansi.resx">
+      <DependentUpon>ViewInstansi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Jabatan\JabatanEntryPage.resx">
+      <DependentUpon>JabatanEntryPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Jabatan\JabatanListPage.resx">
+      <DependentUpon>JabatanListPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\JenisBerkas\JenisBerkasEntryPage.resx">
+      <DependentUpon>JenisBerkasEntryPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\JenisBerkas\JenisBerkasListPage.resx">
+      <DependentUpon>JenisBerkasListPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Pemohon\PemohonEntryPage.resx">
+      <DependentUpon>PemohonEntryPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Pemohon\PemohonListPage.resx">
+      <DependentUpon>PemohonListPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Pemohon\ViewPemohon.resx">
+      <DependentUpon>ViewPemohon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\PermohonanBundle\PermohonanBundleEntryPage.resx">
+      <DependentUpon>PermohonanBundleEntryPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\PermohonanBundle\PermohonanBundleListPage.resx">
+      <DependentUpon>PermohonanBundleListPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Petugas\PetugasEntryPage.resx">
+      <DependentUpon>PetugasEntryPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Petugas\PetugasListPage.resx">
+      <DependentUpon>PetugasListPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Progress\ProgressEntrypage.resx">
+      <DependentUpon>ProgressEntryPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\Progress\ProgressListPage.resx">
+      <DependentUpon>ProgressListPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\HakAkses\HakAkses.resx">
+      <DependentUpon>HakAkses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\ZLogUser\ZLogUserListPage.resx">
+      <DependentUpon>ZLogUserListPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\process.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\framework\SwdevIUI\SwdevIUICore\SwdevIUICore.vbproj">
+      <Project>{7F39A7FF-D86F-499A-AB5B-0197B518C5BE}</Project>
+      <Name>SwdevIUICore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\framework\SwdevIUI\SwdevIUIDatabase\SwdevIUIDatabase.vbproj">
+      <Project>{C2D6FC8A-72B4-43F7-8F9B-C6CBEA60914D}</Project>
+      <Name>SwdevIUIDatabase</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{BA53C759-1997-4C33-B367-814269DDF6B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TransaksiModule</RootNamespace>
+    <AssemblyName>TransaksiModule</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>TransaksiModule.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>TransaksiModule.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=7.3.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PassBandara\PassBandara\Dependencies\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.bpac">
+      <HintPath>..\PassBandara\PassBandara\Dependencies\Interop.bpac.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="TeeChart.Lite">
+      <HintPath>..\PassBandara\PassBandara\Dependencies\TeeChart.Lite.dll</HintPath>
+    </Reference>
+    <Reference Include="TransaksiModule, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSetTransaksi.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTransaksi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EDSDK\CameraControlDlg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EDSDK\Camera\CameraController.vb" />
+    <Compile Include="EDSDK\Camera\CameraEventListener.vb" />
+    <Compile Include="EDSDK\Camera\CameraModel.vb" />
+    <Compile Include="EDSDK\Camera\CameraModelLegacy.vb" />
+    <Compile Include="EDSDK\Command\CloseSessionCommand.vb" />
+    <Compile Include="EDSDK\Command\Command.vb" />
+    <Compile Include="EDSDK\Command\DownloadCommand.vb" />
+    <Compile Include="EDSDK\Command\GetPropertyCommand.vb" />
+    <Compile Include="EDSDK\Command\GetPropertyDescCommand.vb" />
+    <Compile Include="EDSDK\Command\OpenSessionCommand.vb" />
+    <Compile Include="EDSDK\Command\SaveSettingCommand.vb" />
+    <Compile Include="EDSDK\Command\SetPropertyCommand.vb" />
+    <Compile Include="EDSDK\Command\TakePictureCommand.vb" />
+    <Compile Include="EDSDK\Common\EDSDK.vb" />
+    <Compile Include="EDSDK\Common\EDSDKErrors.vb" />
+    <Compile Include="EDSDK\Common\EDSDKTypes.vb" />
+    <Compile Include="EDSDK\Observer.vb" />
+    <Compile Include="EDSDK\Processor.vb" />
+    <Compile Include="EDSDK\property\Property.vb" />
+    <Compile Include="Reports\rptPassBulanan1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPassBulanan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\rptPembayaran.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPembayaran.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\rptPengambilanBlanko.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPengambilanBlanko.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="TransaksiPageFactory.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Transaksi\AntrianTransactionPage.Designer.vb">
+      <DependentUpon>AntrianTransactionPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\AntrianTransactionPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaksi\ThirdLiner\AreaWilayahPermohonan.Designer.vb">
+      <DependentUpon>AreaWilayahPermohonan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\ThirdLiner\AreaWilayahPermohonan.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaksi\FotoDanCetak\FotoDanPencetakanPermohonan.Designer.vb">
+      <DependentUpon>FotoDanPencetakanPermohonan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\FotoDanCetak\FotoDanPencetakanPermohonan.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Frontliner\FrontlinerPermohonanPage.Designer.vb">
+      <DependentUpon>FrontlinerPermohonanPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\Frontliner\FrontlinerPermohonanPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Kasir\PembayaranPermohonan.Designer.vb">
+      <DependentUpon>PembayaranPermohonan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\Kasir\PembayaranPermohonan.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaksi\SecondLiner\PemberkasanPermohonan.Designer.vb">
+      <DependentUpon>PemberkasanPermohonan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\SecondLiner\PemberkasanPermohonan.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Frontliner\PengaturanAwal.Designer.vb">
+      <DependentUpon>PengaturanAwal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\Frontliner\PengaturanAwal.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaksi\Frontliner\StatistikPermohonan.Designer.vb">
+      <DependentUpon>StatistikPermohonan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\Frontliner\StatistikPermohonan.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaksi\HirarkiBrowsing.Designer.vb">
+      <DependentUpon>HirarkiBrowsing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\HirarkiBrowsing.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaksi\SecondLiner\PemberkasanTransactionPage.Designer.vb">
+      <DependentUpon>PemberkasanTransactionPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\SecondLiner\PemberkasanTransactionPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaksi\FlowPermohonan\PersetujuanFlowDisplayPage.Designer.vb">
+      <DependentUpon>PersetujuanFlowDisplayPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\FlowPermohonan\PersetujuanFlowDisplayPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaksi\PersetujuanTransactionPage.Designer.vb">
+      <DependentUpon>PersetujuanTransactionPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\PersetujuanTransactionPage.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaksi\ReportGallery\ReportGallery.Designer.vb">
+      <DependentUpon>ReportGallery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\ReportGallery\ReportGallery.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaksi\ReportGallery\SettingLaporanKinerja.Designer.vb">
+      <DependentUpon>SettingLaporanKinerja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\ReportGallery\SettingLaporanKinerja.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaksi\ReportGallery\SettingLaporanPNBP.Designer.vb">
+      <DependentUpon>SettingLaporanPNBP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi\ReportGallery\SettingLaporanPNBP.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reports\rptPengambilanBlanko.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPengambilanBlanko.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Transaksi\ReportGallery\ReportGallery.resx">
+      <DependentUpon>ReportGallery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\ReportGallery\SettingLaporanKinerja.resx">
+      <DependentUpon>SettingLaporanKinerja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\ReportGallery\SettingLaporanPNBP.resx">
+      <DependentUpon>SettingLaporanPNBP.vb</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="Reports\TemplateLaporanPass.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\bg_flowchart4.png" />
+    <EmbeddedResource Include="EDSDK\CameraControlDlg.resx">
+      <DependentUpon>CameraControlDlg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="Reports\rptPassBulanan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPassBulanan1.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Reports\rptPembayaran.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPembayaran.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Transaksi\AntrianTransactionPage.resx">
+      <DependentUpon>AntrianTransactionPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\ThirdLiner\AreaWilayahPermohonan.resx">
+      <DependentUpon>AreaWilayahPermohonan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\FotoDanCetak\FotoDanPencetakanPermohonan.resx">
+      <DependentUpon>FotoDanPencetakanPermohonan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Frontliner\FrontlinerPermohonanPage.resx">
+      <DependentUpon>FrontlinerPermohonanPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Kasir\PembayaranPermohonan.resx">
+      <DependentUpon>PembayaranPermohonan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\SecondLiner\PemberkasanPermohonan.resx">
+      <DependentUpon>PemberkasanPermohonan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Frontliner\PengaturanAwal.resx">
+      <DependentUpon>PengaturanAwal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\Frontliner\StatistikPermohonan.resx">
+      <DependentUpon>StatistikPermohonan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\HirarkiBrowsing.resx">
+      <DependentUpon>HirarkiBrowsing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\SecondLiner\PemberkasanTransactionPage.resx">
+      <DependentUpon>PemberkasanTransactionPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\FlowPermohonan\PersetujuanFlowDisplayPage.resx">
+      <DependentUpon>PersetujuanFlowDisplayPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi\PersetujuanTransactionPage.resx">
+      <DependentUpon>PersetujuanTransactionPage.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DataSetTransaksi.xsc">
+      <DependentUpon>DataSetTransaksi.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTransaksi.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTransaksi.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSetTransaksi.xss">
+      <DependentUpon>DataSetTransaksi.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\framework\SwdevIUI\SwdevIUICore\SwdevIUICore.vbproj">
+      <Project>{7F39A7FF-D86F-499A-AB5B-0197B518C5BE}</Project>
+      <Name>SwdevIUICore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\framework\SwdevIUI\SwdevIUIDatabase\SwdevIUIDatabase.vbproj">
+      <Project>{C2D6FC8A-72B4-43F7-8F9B-C6CBEA60914D}</Project>
+      <Name>SwdevIUIDatabase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterApplicationModule\MasterModule.vbproj">
+      <Project>{414FB9C3-023A-4787-84BA-45C32516872E}</Project>
+      <Name>MasterModule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RootSection\RootSection.vbproj">
+      <Project>{045C4F77-8376-4DD6-B488-729D5DBD7423}</Project>
+      <Name>RootSection</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bt_disetujui_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\putihg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_instansi_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t_permohonan_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_berkaspemohon_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_berkas_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_area_321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t_pencetakan_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t_pembayaran_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t_flowchart_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

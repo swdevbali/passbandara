@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetTransaksi" targetNamespace="http://tempuri.org/DataSetTransaksi.xsd" xmlns:mstns="http://tempuri.org/DataSetTransaksi.xsd" xmlns="http://tempuri.org/DataSetTransaksi.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (MySettings)" PropertyReference="ApplicationSettings.TransaksiModule.My.MySettings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tb_pemohonTableAdapter" GeneratorDataComponentClassName="tb_pemohonTableAdapter" Name="tb_pemohon" UserDataComponentName="tb_pemohonTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM `tb_pemohon`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idtb_pemohon" DataSetColumn="idtb_pemohon" />
+              <Mapping SourceColumn="nama" DataSetColumn="nama" />
+              <Mapping SourceColumn="alamat" DataSetColumn="alamat" />
+              <Mapping SourceColumn="no_identitas" DataSetColumn="no_identitas" />
+              <Mapping SourceColumn="jenis_kelamin" DataSetColumn="jenis_kelamin" />
+              <Mapping SourceColumn="idtb_instansi" DataSetColumn="idtb_instansi" />
+              <Mapping SourceColumn="status_pemohon" DataSetColumn="status_pemohon" />
+              <Mapping SourceColumn="idtb_privilege" DataSetColumn="idtb_privilege" />
+              <Mapping SourceColumn="jabatan" DataSetColumn="jabatan" />
+              <Mapping SourceColumn="nomor_registrasi" DataSetColumn="nomor_registrasi" />
+              <Mapping SourceColumn="nomor_pass" DataSetColumn="nomor_pass" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="rptPembayaranTableAdapter" GeneratorDataComponentClassName="rptPembayaranTableAdapter" Name="rptPembayaran" UserDataComponentName="rptPembayaranTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM `rptpembayaran`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nomor_bundle" DataSetColumn="nomor_bundle" />
+              <Mapping SourceColumn="tanggal_masuk_proses" DataSetColumn="tanggal_masuk_proses" />
+              <Mapping SourceColumn="nama_instansi" DataSetColumn="nama_instansi" />
+              <Mapping SourceColumn="pengurus" DataSetColumn="pengurus" />
+              <Mapping SourceColumn="tanggal_selesai" DataSetColumn="tanggal_selesai" />
+              <Mapping SourceColumn="tanggal_berlaku" DataSetColumn="tanggal_berlaku" />
+              <Mapping SourceColumn="nomor_pass" DataSetColumn="nomor_pass" />
+              <Mapping SourceColumn="nama" DataSetColumn="nama" />
+              <Mapping SourceColumn="no_identitas" DataSetColumn="no_identitas" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="rptCetakPassTableAdapter" GeneratorDataComponentClassName="rptCetakPassTableAdapter" Name="rptCetakPass" UserDataComponentName="rptCetakPassTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM `vcetakpass`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idtb_pemohon" DataSetColumn="idtb_pemohon" />
+              <Mapping SourceColumn="nama" DataSetColumn="nama" />
+              <Mapping SourceColumn="alamat" DataSetColumn="alamat" />
+              <Mapping SourceColumn="no_identitas" DataSetColumn="no_identitas" />
+              <Mapping SourceColumn="jenis_kelamin" DataSetColumn="jenis_kelamin" />
+              <Mapping SourceColumn="idtb_instansi" DataSetColumn="idtb_instansi" />
+              <Mapping SourceColumn="status_pemohon" DataSetColumn="status_pemohon" />
+              <Mapping SourceColumn="idtb_privilege" DataSetColumn="idtb_privilege" />
+              <Mapping SourceColumn="jabatan" DataSetColumn="jabatan" />
+              <Mapping SourceColumn="nomor_registrasi" DataSetColumn="nomor_registrasi" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="v_pass_bulananTableAdapter" GeneratorDataComponentClassName="v_pass_bulananTableAdapter" Name="v_pass_bulanan" UserDataComponentName="v_pass_bulananTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM `v_pass_bulanan`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nomor_pass" DataSetColumn="nomor_pass" />
+              <Mapping SourceColumn="nama" DataSetColumn="nama" />
+              <Mapping SourceColumn="nama_instansi" DataSetColumn="nama_instansi" />
+              <Mapping SourceColumn="tanggal_berlaku" DataSetColumn="tanggal_berlaku" />
+              <Mapping SourceColumn="terminal" DataSetColumn="terminal" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="viewRptPengambilanBlankoTableAdapter" GeneratorDataComponentClassName="viewRptPengambilanBlankoTableAdapter" Name="viewRptPengambilanBlanko" UserDataComponentName="viewRptPengambilanBlankoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM `viewrptpengambilanblanko`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idtb_permohonan_bundle" DataSetColumn="idtb_permohonan_bundle" />
+              <Mapping SourceColumn="idtb_instansi" DataSetColumn="idtb_instansi" />
+              <Mapping SourceColumn="tanggal_masuk_proses" DataSetColumn="tanggal_masuk_proses" />
+              <Mapping SourceColumn="nomor_bundle" DataSetColumn="nomor_bundle" />
+              <Mapping SourceColumn="pengurus" DataSetColumn="pengurus" />
+              <Mapping SourceColumn="status" DataSetColumn="status" />
+              <Mapping SourceColumn="idtb_next_progress" DataSetColumn="idtb_next_progress" />
+              <Mapping SourceColumn="status_pembayaran" DataSetColumn="status_pembayaran" />
+              <Mapping SourceColumn="idtb_next_progress_special_screening" DataSetColumn="idtb_next_progress_special_screening" />
+              <Mapping SourceColumn="nomor_surat" DataSetColumn="nomor_surat" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetTransaksi" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetTransaksi" msprop:Generator_UserDSName="DataSetTransaksi">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tb_pemohon" msprop:Generator_TableClassName="tb_pemohonDataTable" msprop:Generator_TableVarName="tabletb_pemohon" msprop:Generator_TablePropName="tb_pemohon" msprop:Generator_RowDeletingName="tb_pemohonRowDeleting" msprop:Generator_UserTableName="tb_pemohon" msprop:Generator_RowChangingName="tb_pemohonRowChanging" msprop:Generator_RowEvHandlerName="tb_pemohonRowChangeEventHandler" msprop:Generator_RowDeletedName="tb_pemohonRowDeleted" msprop:Generator_RowEvArgName="tb_pemohonRowChangeEvent" msprop:Generator_RowChangedName="tb_pemohonRowChanged" msprop:Generator_RowClassName="tb_pemohonRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idtb_pemohon" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidtb_pemohon" msprop:Generator_ColumnPropNameInRow="idtb_pemohon" msprop:Generator_ColumnPropNameInTable="idtb_pemohonColumn" msprop:Generator_UserColumnName="idtb_pemohon" type="xs:long" minOccurs="0" />
+              <xs:element name="nama" msprop:Generator_ColumnVarNameInTable="columnnama" msprop:Generator_ColumnPropNameInRow="nama" msprop:Generator_ColumnPropNameInTable="namaColumn" msprop:Generator_UserColumnName="nama">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="alamat" msprop:Generator_ColumnVarNameInTable="columnalamat" msprop:Generator_ColumnPropNameInRow="alamat" msprop:Generator_ColumnPropNameInTable="alamatColumn" msprop:Generator_UserColumnName="alamat">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="no_identitas" msprop:Generator_ColumnVarNameInTable="columnno_identitas" msprop:Generator_ColumnPropNameInRow="no_identitas" msprop:Generator_ColumnPropNameInTable="no_identitasColumn" msprop:Generator_UserColumnName="no_identitas">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="jenis_kelamin" msprop:Generator_ColumnVarNameInTable="columnjenis_kelamin" msprop:Generator_ColumnPropNameInRow="jenis_kelamin" msprop:Generator_ColumnPropNameInTable="jenis_kelaminColumn" msprop:Generator_UserColumnName="jenis_kelamin">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idtb_instansi" msprop:Generator_ColumnVarNameInTable="columnidtb_instansi" msprop:Generator_ColumnPropNameInRow="idtb_instansi" msprop:Generator_ColumnPropNameInTable="idtb_instansiColumn" msprop:Generator_UserColumnName="idtb_instansi" type="xs:long" minOccurs="0" />
+              <xs:element name="status_pemohon" msprop:Generator_ColumnVarNameInTable="columnstatus_pemohon" msprop:Generator_ColumnPropNameInRow="status_pemohon" msprop:Generator_ColumnPropNameInTable="status_pemohonColumn" msprop:Generator_UserColumnName="status_pemohon">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idtb_privilege" msprop:Generator_ColumnVarNameInTable="columnidtb_privilege" msprop:Generator_ColumnPropNameInRow="idtb_privilege" msprop:Generator_ColumnPropNameInTable="idtb_privilegeColumn" msprop:Generator_UserColumnName="idtb_privilege" type="xs:long" minOccurs="0" />
+              <xs:element name="jabatan" msprop:Generator_ColumnVarNameInTable="columnjabatan" msprop:Generator_ColumnPropNameInRow="jabatan" msprop:Generator_ColumnPropNameInTable="jabatanColumn" msprop:Generator_UserColumnName="jabatan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nomor_registrasi" msprop:Generator_ColumnVarNameInTable="columnnomor_registrasi" msprop:Generator_ColumnPropNameInRow="nomor_registrasi" msprop:Generator_ColumnPropNameInTable="nomor_registrasiColumn" msprop:Generator_UserColumnName="nomor_registrasi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nomor_pass" msprop:Generator_ColumnVarNameInTable="columnnomor_pass" msprop:Generator_ColumnPropNameInRow="nomor_pass" msprop:Generator_ColumnPropNameInTable="nomor_passColumn" msprop:Generator_UserColumnName="nomor_pass">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="rptPembayaran" msprop:Generator_TableClassName="rptPembayaranDataTable" msprop:Generator_TableVarName="tablerptPembayaran" msprop:Generator_TablePropName="rptPembayaran" msprop:Generator_RowDeletingName="rptPembayaranRowDeleting" msprop:Generator_UserTableName="rptPembayaran" msprop:Generator_RowChangingName="rptPembayaranRowChanging" msprop:Generator_RowEvHandlerName="rptPembayaranRowChangeEventHandler" msprop:Generator_RowDeletedName="rptPembayaranRowDeleted" msprop:Generator_RowEvArgName="rptPembayaranRowChangeEvent" msprop:Generator_RowChangedName="rptPembayaranRowChanged" msprop:Generator_RowClassName="rptPembayaranRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nomor_bundle" msprop:Generator_ColumnVarNameInTable="columnnomor_bundle" msprop:Generator_ColumnPropNameInRow="nomor_bundle" msprop:Generator_ColumnPropNameInTable="nomor_bundleColumn" msprop:Generator_UserColumnName="nomor_bundle">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal_masuk_proses" msprop:Generator_ColumnVarNameInTable="columntanggal_masuk_proses" msprop:Generator_ColumnPropNameInRow="tanggal_masuk_proses" msprop:Generator_ColumnPropNameInTable="tanggal_masuk_prosesColumn" msprop:Generator_UserColumnName="tanggal_masuk_proses" type="xs:dateTime" />
+              <xs:element name="nama_instansi" msprop:Generator_ColumnVarNameInTable="columnnama_instansi" msprop:Generator_ColumnPropNameInRow="nama_instansi" msprop:Generator_ColumnPropNameInTable="nama_instansiColumn" msprop:Generator_UserColumnName="nama_instansi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pengurus" msprop:Generator_ColumnVarNameInTable="columnpengurus" msprop:Generator_ColumnPropNameInRow="pengurus" msprop:Generator_ColumnPropNameInTable="pengurusColumn" msprop:Generator_UserColumnName="pengurus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal_selesai" msprop:Generator_ColumnVarNameInTable="columntanggal_selesai" msprop:Generator_ColumnPropNameInRow="tanggal_selesai" msprop:Generator_ColumnPropNameInTable="tanggal_selesaiColumn" msprop:Generator_UserColumnName="tanggal_selesai" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="tanggal_berlaku" msprop:Generator_ColumnVarNameInTable="columntanggal_berlaku" msprop:Generator_ColumnPropNameInRow="tanggal_berlaku" msprop:Generator_ColumnPropNameInTable="tanggal_berlakuColumn" msprop:Generator_UserColumnName="tanggal_berlaku" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="nomor_pass" msprop:Generator_ColumnVarNameInTable="columnnomor_pass" msprop:Generator_ColumnPropNameInRow="nomor_pass" msprop:Generator_ColumnPropNameInTable="nomor_passColumn" msprop:Generator_UserColumnName="nomor_pass">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama" msprop:Generator_ColumnVarNameInTable="columnnama" msprop:Generator_ColumnPropNameInRow="nama" msprop:Generator_ColumnPropNameInTable="namaColumn" msprop:Generator_UserColumnName="nama">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="no_identitas" msprop:Generator_ColumnVarNameInTable="columnno_identitas" msprop:Generator_ColumnPropNameInRow="no_identitas" msprop:Generator_ColumnPropNameInTable="no_identitasColumn" msprop:Generator_UserColumnName="no_identitas">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="rptCetakPass" msprop:Generator_TableClassName="rptCetakPassDataTable" msprop:Generator_TableVarName="tablerptCetakPass" msprop:Generator_TablePropName="rptCetakPass" msprop:Generator_RowDeletingName="rptCetakPassRowDeleting" msprop:Generator_UserTableName="rptCetakPass" msprop:Generator_RowChangingName="rptCetakPassRowChanging" msprop:Generator_RowEvHandlerName="rptCetakPassRowChangeEventHandler" msprop:Generator_RowDeletedName="rptCetakPassRowDeleted" msprop:Generator_RowEvArgName="rptCetakPassRowChangeEvent" msprop:Generator_RowChangedName="rptCetakPassRowChanged" msprop:Generator_RowClassName="rptCetakPassRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idtb_pemohon" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidtb_pemohon" msprop:Generator_ColumnPropNameInRow="idtb_pemohon" msprop:Generator_ColumnPropNameInTable="idtb_pemohonColumn" msprop:Generator_UserColumnName="idtb_pemohon" type="xs:long" minOccurs="0" />
+              <xs:element name="nama" msprop:Generator_ColumnVarNameInTable="columnnama" msprop:Generator_ColumnPropNameInRow="nama" msprop:Generator_ColumnPropNameInTable="namaColumn" msprop:Generator_UserColumnName="nama">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="alamat" msprop:Generator_ColumnVarNameInTable="columnalamat" msprop:Generator_ColumnPropNameInRow="alamat" msprop:Generator_ColumnPropNameInTable="alamatColumn" msprop:Generator_UserColumnName="alamat">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="no_identitas" msprop:Generator_ColumnVarNameInTable="columnno_identitas" msprop:Generator_ColumnPropNameInRow="no_identitas" msprop:Generator_ColumnPropNameInTable="no_identitasColumn" msprop:Generator_UserColumnName="no_identitas">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="jenis_kelamin" msprop:Generator_ColumnVarNameInTable="columnjenis_kelamin" msprop:Generator_ColumnPropNameInRow="jenis_kelamin" msprop:Generator_ColumnPropNameInTable="jenis_kelaminColumn" msprop:Generator_UserColumnName="jenis_kelamin">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idtb_instansi" msprop:Generator_ColumnVarNameInTable="columnidtb_instansi" msprop:Generator_ColumnPropNameInRow="idtb_instansi" msprop:Generator_ColumnPropNameInTable="idtb_instansiColumn" msprop:Generator_UserColumnName="idtb_instansi" type="xs:long" minOccurs="0" />
+              <xs:element name="status_pemohon" msprop:Generator_ColumnVarNameInTable="columnstatus_pemohon" msprop:Generator_ColumnPropNameInRow="status_pemohon" msprop:Generator_ColumnPropNameInTable="status_pemohonColumn" msprop:Generator_UserColumnName="status_pemohon">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idtb_privilege" msprop:Generator_ColumnVarNameInTable="columnidtb_privilege" msprop:Generator_ColumnPropNameInRow="idtb_privilege" msprop:Generator_ColumnPropNameInTable="idtb_privilegeColumn" msprop:Generator_UserColumnName="idtb_privilege" type="xs:long" minOccurs="0" />
+              <xs:element name="jabatan" msprop:Generator_ColumnVarNameInTable="columnjabatan" msprop:Generator_ColumnPropNameInRow="jabatan" msprop:Generator_ColumnPropNameInTable="jabatanColumn" msprop:Generator_UserColumnName="jabatan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nomor_registrasi" msprop:Generator_ColumnVarNameInTable="columnnomor_registrasi" msprop:Generator_ColumnPropNameInRow="nomor_registrasi" msprop:Generator_ColumnPropNameInTable="nomor_registrasiColumn" msprop:Generator_UserColumnName="nomor_registrasi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="v_pass_bulanan" msprop:Generator_TableClassName="v_pass_bulananDataTable" msprop:Generator_TableVarName="tablev_pass_bulanan" msprop:Generator_TablePropName="v_pass_bulanan" msprop:Generator_RowDeletingName="v_pass_bulananRowDeleting" msprop:Generator_UserTableName="v_pass_bulanan" msprop:Generator_RowChangingName="v_pass_bulananRowChanging" msprop:Generator_RowEvHandlerName="v_pass_bulananRowChangeEventHandler" msprop:Generator_RowDeletedName="v_pass_bulananRowDeleted" msprop:Generator_RowEvArgName="v_pass_bulananRowChangeEvent" msprop:Generator_RowChangedName="v_pass_bulananRowChanged" msprop:Generator_RowClassName="v_pass_bulananRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nomor_pass" msprop:Generator_ColumnVarNameInTable="columnnomor_pass" msprop:Generator_ColumnPropNameInRow="nomor_pass" msprop:Generator_ColumnPropNameInTable="nomor_passColumn" msprop:Generator_UserColumnName="nomor_pass">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama" msprop:Generator_ColumnVarNameInTable="columnnama" msprop:Generator_ColumnPropNameInRow="nama" msprop:Generator_ColumnPropNameInTable="namaColumn" msprop:Generator_UserColumnName="nama">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama_instansi" msprop:Generator_ColumnVarNameInTable="columnnama_instansi" msprop:Generator_ColumnPropNameInRow="nama_instansi" msprop:Generator_ColumnPropNameInTable="nama_instansiColumn" msprop:Generator_UserColumnName="nama_instansi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal_berlaku" msprop:Generator_ColumnVarNameInTable="columntanggal_berlaku" msprop:Generator_ColumnPropNameInRow="tanggal_berlaku" msprop:Generator_ColumnPropNameInTable="tanggal_berlakuColumn" msprop:Generator_UserColumnName="tanggal_berlaku" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="terminal" msprop:Generator_ColumnVarNameInTable="columnterminal" msprop:Generator_ColumnPropNameInRow="terminal" msprop:Generator_ColumnPropNameInTable="terminalColumn" msprop:Generator_UserColumnName="terminal">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="viewRptPengambilanBlanko" msprop:Generator_TableClassName="viewRptPengambilanBlankoDataTable" msprop:Generator_TableVarName="tableviewRptPengambilanBlanko" msprop:Generator_TablePropName="viewRptPengambilanBlanko" msprop:Generator_RowDeletingName="viewRptPengambilanBlankoRowDeleting" msprop:Generator_UserTableName="viewRptPengambilanBlanko" msprop:Generator_RowChangingName="viewRptPengambilanBlankoRowChanging" msprop:Generator_RowEvHandlerName="viewRptPengambilanBlankoRowChangeEventHandler" msprop:Generator_RowDeletedName="viewRptPengambilanBlankoRowDeleted" msprop:Generator_RowEvArgName="viewRptPengambilanBlankoRowChangeEvent" msprop:Generator_RowChangedName="viewRptPengambilanBlankoRowChanged" msprop:Generator_RowClassName="viewRptPengambilanBlankoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idtb_permohonan_bundle" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidtb_permohonan_bundle" msprop:Generator_ColumnPropNameInRow="idtb_permohonan_bundle" msprop:Generator_ColumnPropNameInTable="idtb_permohonan_bundleColumn" msprop:Generator_UserColumnName="idtb_permohonan_bundle" type="xs:long" minOccurs="0" />
+              <xs:element name="idtb_instansi" msprop:Generator_ColumnVarNameInTable="columnidtb_instansi" msprop:Generator_ColumnPropNameInRow="idtb_instansi" msprop:Generator_ColumnPropNameInTable="idtb_instansiColumn" msprop:Generator_UserColumnName="idtb_instansi" type="xs:long" />
+              <xs:element name="tanggal_masuk_proses" msprop:Generator_ColumnVarNameInTable="columntanggal_masuk_proses" msprop:Generator_ColumnPropNameInRow="tanggal_masuk_proses" msprop:Generator_ColumnPropNameInTable="tanggal_masuk_prosesColumn" msprop:Generator_UserColumnName="tanggal_masuk_proses" type="xs:dateTime" />
+              <xs:element name="nomor_bundle" msprop:Generator_ColumnVarNameInTable="columnnomor_bundle" msprop:Generator_ColumnPropNameInRow="nomor_bundle" msprop:Generator_ColumnPropNameInTable="nomor_bundleColumn" msprop:Generator_UserColumnName="nomor_bundle">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pengurus" msprop:Generator_ColumnVarNameInTable="columnpengurus" msprop:Generator_ColumnPropNameInRow="pengurus" msprop:Generator_ColumnPropNameInTable="pengurusColumn" msprop:Generator_UserColumnName="pengurus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="45" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idtb_next_progress" msprop:Generator_ColumnVarNameInTable="columnidtb_next_progress" msprop:Generator_ColumnPropNameInRow="idtb_next_progress" msprop:Generator_ColumnPropNameInTable="idtb_next_progressColumn" msprop:Generator_UserColumnName="idtb_next_progress" type="xs:long" minOccurs="0" />
+              <xs:element name="status_pembayaran" msprop:Generator_ColumnVarNameInTable="columnstatus_pembayaran" msprop:Generator_ColumnPropNameInRow="status_pembayaran" msprop:Generator_ColumnPropNameInTable="status_pembayaranColumn" msprop:Generator_UserColumnName="status_pembayaran">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idtb_next_progress_special_screening" msprop:Generator_ColumnVarNameInTable="columnidtb_next_progress_special_screening" msprop:Generator_ColumnPropNameInRow="idtb_next_progress_special_screening" msprop:Generator_ColumnPropNameInTable="idtb_next_progress_special_screeningColumn" msprop:Generator_UserColumnName="idtb_next_progress_special_screening" type="xs:long" minOccurs="0" />
+              <xs:element name="nomor_surat" msprop:Generator_ColumnVarNameInTable="columnnomor_surat" msprop:Generator_ColumnPropNameInRow="nomor_surat" msprop:Generator_ColumnPropNameInTable="nomor_suratColumn" msprop:Generator_UserColumnName="nomor_surat">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65535" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:tb_pemohon" />
+      <xs:field xpath="mstns:idtb_pemohon" />
+    </xs:unique>
+    <xs:unique name="rptCetakPass_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:rptCetakPass" />
+      <xs:field xpath="mstns:idtb_pemohon" />
+    </xs:unique>
+    <xs:unique name="viewRptPengambilanBlanko_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:viewRptPengambilanBlanko" />
+      <xs:field xpath="mstns:idtb_permohonan_bundle" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
